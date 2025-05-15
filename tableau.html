@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Disposition des blocs</title>
+  
+  <style>
+    table {
+                border-collapse: collapse; /* Supprime les espaces entre les bordures */
+                margin-bottom: 20px; /* Marge en bas du tableau */
+            }
+            table, th, td {
+                border: 1px solid black; /* Bordure noire pour le tableau et les cellules */
+                text-align: center; /* Centre le texte dans les cellules */
+            }
+            th, td {
+                padding: 10px; /* Espace intérieur dans les cellules */
+                }
+    .container {
+      display: flex;
+      gap: 50px; /* Espace entre les deux tableaux */
+      margin: 40px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2px;
+      border: 1px solid #000;
+    }
+
+    .tableau-haut {
+      grid-template-areas:
+        "A B"
+        "D C"
+        "E F"
+        ". G";
+      grid-template-columns: 100px 200px;
+      grid-template-rows: repeat(4, 50px);
+    }
+
+    .tableau-bas {
+      grid-template-areas:
+        "IG1 IG1 IG1"
+        "A B B";
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: 50px 50px;
+    }
+
+    .block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border: 1px solid black;
+    }
+
+    .A { background: red; grid-area: A; }
+    .B { background: lightgray; grid-area: B; }
+    .C { background: blue; color: white; grid-area: C; }
+    .D { background: white; grid-area: D; }
+    .E { background: green; color: white; grid-area: E; }
+    .F { background: white; grid-area: F; }
+    .G { border: 1px dashed red; grid-area: G; }
+    .IG1 { grid-area: IG1; }
+    .IG2A { grid-area: A; }
+    .IG2B1 { grid-area: B; }
+    .IG2B2 { grid-area: B; }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Tableau des blocs en couleur -->
+    <div class="grid tableau-haut">
+      <div class="block A">A</div>
+      <div class="block B">B</div>
+      <div class="block C">C</div>
+      <div class="block D">D</div>
+      <div class="block E">E</div>
+      <div class="block F">F</div>
+      <div class="block G">G</div>
+    </div>
+    <!-- Tableau repartissant les IG -->
+    <div class="grid tableau-bas">
+      <div class="block IG1">IG1-B</div>
+      <div class="block IG2A">IG2-A</div>
+      <div class="block IG2B1">IG2-B</div>
+      <div class="block IG2C">IG2-C</div>
+    </div>
+  </div>
+  <!-- Tableaux A B C-->
+  <table>
+    <tr>
+       <td colspan="4">A</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>C</td>
+    </tr>
+  </table>
+
+<!-- Tableaux D E F-->
+<table>
+  <tr>
+    <td rowspan="4">D</td>
+    <td colspan="6">E</td>
+  </tr>
+  <tr>
+    <td class="6">F</td>
+  </tr>
+</table>
+    
+ 
+  
+
+</body>
+</html>

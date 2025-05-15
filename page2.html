@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil de HODONOU Romain</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('Images/file-5yJBJzKbU8SqsY1vBp3D1s.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0, 82, 204, 0.8);
+      padding: 20px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .left-logo img,
+    .right-logo img {
+      height: 60px;
+    }
+
+    .banner h1 {
+      font-size: 1.8em;
+      text-align: center;
+      flex-grow: 1;
+      margin: 0 20px;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 10s linear infinite;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    marquee {
+      font-size: 1.3em;
+      color: black;
+      margin: 10px 0;
+      background-color: rgba(0, 64, 128, 0.8);
+      padding: 8px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      color: #ffdd57;
+      margin-bottom: 15px;
+      border-left: 5px solid #ffffff;
+      padding-left: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.7;
+      color: black;
+    }
+
+    .photo {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="left-logo">
+      <img src="Images/ENEAM-logo-300x243.png" alt="Logo ENEAM">
+    </div>
+    <h1>Bienvenue à vous sur ma page web</h1>
+    <div class="right-logo">
+      <img src="Images/Le-Festival-du-Danxome-Enjeux-et-defis-pour-la-Commune-dAbomey-dans-le-contexte-de-l1.png" alt="Logo UAC">
+    </div>
+  </div>
+
+  <marquee behavior="scroll" direction="left">HODONOU Romain</marquee>
+
+  <section>
+    <h2>I. État Civil</h2>
+    <p><strong>Nom :</strong> HODONOU</p>
+    <p><strong>Prénom :</strong> E. Romain</p>
+    <p><strong>Âge :</strong> 19 ans</p>
+    <p><strong>Sexe :</strong> Masculin</p>
+    <p><strong>Diplôme :</strong> Niveau BAC</p>
+    <p><strong>Loisirs :</strong> Athlétisme, Séries Télévisées</p>
+    <p><strong>Photo :</strong></p>
+    <div class="photo">
+      <img src="Images/1723817725531 (2).jpg" alt="Photo de HODONOU Romain">
+    </div>
+  </section>
+
+  <section>
+    <h2>II. Description</h2>
+    <p>
+      Je suis un étudiant passionné par l'informatique de gestion, avec une spécialisation en administration des réseaux informatiques. Doté d'un bon esprit analytique, j'aime comprendre en profondeur le fonctionnement des protocoles et des architectures réseau. J'apprécie le travail en équipe et sais m'adapter aux besoins techniques d'une organisation.
+    </p>
+    <p>
+      Je vise une carrière où je pourrai combiner expertise technique et gestion stratégique des réseaux. Grâce à mes compétences en réseaux informatiques, je peux assurer la continuité des opérations, la sécurité des données et l'optimisation des performances, qui jouent un rôle crucial dans la compétitivité et l'innovation des entreprises.
+    </p>
+    <p>
+      Avec mes compétences en virtualisation et en cloud computing, je pourrai répondre efficacement aux défis technologiques d'aujourd'hui.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 - HODONOU Romain | Étudiant à ENEAM
+  </footer>
+</body>
+</html>

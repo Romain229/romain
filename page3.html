@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Informatique de Gestion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg-color: #f0f4f8;
+      --accent: #3f51b5;
+      --text-dark: #2e3a59;
+      --text-light: #6c7a89;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      animation: slideFadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .citation {
+      font-style: italic;
+      font-size: 1.2em;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 30px;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      p, .citation {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💻 L’Informatique de Gestion </h1>
+    <p>
+      L'informatique de gestion est une discipline clé dans le monde des affaires. Elle permet d'utiliser
+      les technologies de l'information pour organiser, analyser et améliorer les processus de gestion au sein d'une entreprise.
+    </p>
+    <p>
+      Grâce à des outils tels que les ERP, les bases de données ou les systèmes décisionnels, les entreprises peuvent automatiser
+      leurs opérations, améliorer leur productivité et prendre des décisions plus éclairées.
+    </p>
+    <p>
+      Cette synergie entre informatique et gestion forme des professionnels capables de comprendre les enjeux
+      économiques tout en maîtrisant les technologies numériques.
+    </p>
+    <p class="citation">
+      « L'informatique de gestion, c’est rendre l’entreprise plus intelligente, plus rapide et plus agile. »
+    </p>
+  </div>
+</body>
+</html>

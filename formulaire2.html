@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription Étudiant Unique</title>
+  <style>
+    * {
+       box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: linear-gradient(120deg, #ecf0f3, #fefefe);
+      color: #333;
+    }
+   .form-container {
+       max-width: 850px;
+       margin: auto;
+       padding: 3rem;
+       border-radius: 20px;
+       background: #ffffff;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #0059b3;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+    legend {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #003366;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #cce;
+      padding-bottom: 5px;
+    }
+    .input-group {
+       margin-bottom: 1.5rem;
+       position: relative;
+    }
+    .input-group input, .input-group select {
+       width: 100%;
+       padding: 1rem;
+       border: 2px solid #cce;
+       border-radius: 10px;
+       outline: none;
+       font-size: 1rem;
+       background: #f9fbff;
+       transition: 0.3s ease;
+    }
+    .input-group label {
+       position: absolute;
+       top: -0.7rem;
+       left: 1rem;
+       background: #fff;
+       padding: 0 0.5rem;
+       font-size: 0.9rem;
+       color: #0059b3;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .checkbox-group label, .radio-group label {
+       background-color: #f1f6ff;
+       padding: 0.5rem 1rem;
+       border-radius: 8px;
+       cursor: pointer;
+       border: 1px solid #a3c2ff;
+       user-select: none;
+       transition: 0.3s;
+    }
+    .checkbox-group input, .radio-group input {
+      margin-right: 0.5rem;
+    }
+    .checkbox-group label:hover, .radio-group label:hover {
+       background-color: #dceaff;
+    }
+    .buttons {
+       display: flex;
+       justify-content: space-between;
+       gap: 1rem;
+       margin-top: 2rem;
+    }
+    .buttons button {
+      flex: 1;
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-send {
+      background: #0077cc;
+    }
+    .btn-send:hover {
+       background: #005fa3;
+    }
+    .btn-reset {
+      background: #ff6f61;
+    }
+    .btn-reset:hover {
+      background: #e1554a;
+    }
+    .btn-quit {
+      background: #999;
+    }
+    .btn-quit:hover {
+      background: #777;
+    }
+    @media (max-width: 600px) {
+     .buttons {
+        flex-direction: column;
+      }
+    }
+   </style>
+</head>
+<body>
+   <div class="form-container">
+      <h2>Formulaire Unique d'Inscription Étudiant</h2>
+      <form method="POST" action="#">
+      <fieldset>
+         <legend>État Civil</legend>
+          <div class="input-group">
+             <label for="nom">Nom</label>
+             <input type="text" id="nom" name="nom" required />
+         </div>
+         <div class="input-group">
+             <label for="prenom">Prénom</label>
+             <input type="text" id="prenom" name="prenom" required />
+         </div>
+         <div class="input-group">
+              <label for="dob">Date de Naissance</label>
+              <input type="date" id="dob" name="dob" required />
+         </div>
+         <div class="input-group">
+             <label for="sexe">Sexe</label>
+             <select id="sexe" name="sexe" required>
+                 <option value="">-- Choisir --</option>
+                 <option value="masculin">Masculin</option>
+                 <option value="feminin">Féminin</option>
+                 <option value="autre">Autre</option>
+             </select>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+      </div>
+      <div class="input-group">
+         <label for="contact">Contact</label>
+         <input type="tel" id="contact" name="contact" required />
+      </div>
+    </fieldset>
+    <fieldset>
+       <legend>Diplômes</legend>
+       <div class="checkbox-group">
+          <label><input type="checkbox" name="diplomes[]" value="CEP" /> CEP</label>
+          <label><input type="checkbox" name="diplomes[]" value="BEPC" /> BEPC</label>
+          <label><input type="checkbox" name="diplomes[]" value="BAC" /> BAC</label>
+       </div>
+   </fieldset>
+   <fieldset>
+        <legend>Adresse</legend>
+        <div class="input-group">
+           <label for="adresse">Adresse</label>
+           <input type="text" id="adresse" name="adresse" required />
+       </div>
+       <div class="radio-group">
+          <label><input type="radio" name="pays" value="Bénin" required /> Bénin</label>
+          <label><input type="radio" name="pays" value="Sénégal" /> Sénégal</label>
+          <label><input type="radio" name="pays" value="France" /> France</label>
+      </div>
+   </fieldset>
+    <div class="buttons">
+       <button type="submit" class="btn-send">Envoyer</button>
+       <button type="reset" class="btn-reset">Effacer</button>
+       <button type="button" class="btn-quit" onclick="alert('Merci d\'avoir visité !');
+       window.close();">Quitter</button>
+    </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
